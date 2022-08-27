@@ -1,5 +1,6 @@
-import {LocalDB} from 'https://cdn.skypack.dev/peadb';
+import { LocalDB } from 'https://cdn.skypack.dev/peadb';
 import shortid from 'https://cdn.skypack.dev/shortid';
+import confetti from 'https://cdn.skypack.dev/canvas-confetti'
 
 const db = new LocalDB('grocery-list-db')
 const groceries = db.getAll() || []
@@ -12,6 +13,10 @@ const createGroceryElement = groceryName => {
     const groceryElement = document.createElement('li')
     groceryElement.innerText = groceryName.value
     groceryElement.classList.add('groceryItem')
+    groceryElement.addEventListener('click', () => {
+        groceryElement.remove()
+        db.delete(groceryName.key)
+    })
     return groceryElement
 }
 
