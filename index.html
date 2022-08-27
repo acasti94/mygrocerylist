@@ -7,7 +7,7 @@
 
     <title>My Grocery List</title>
 
-    <!--link rel="stylesheet" href="reset.css" /-->
+    <link rel="stylesheet" href="reset.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -18,18 +18,18 @@
 </head>
 <body>
     <h1 class="title">My Grocery List 📝</h1>
-    <form>
+    <form class="newGroceryForm">
         <input id="newGrocery"
         autocomplete="off" 
         type="text" 
         placeholder="Add an item to your list"
         />
-        <button type="submit">Add</button>
+        <button id="addBtn" type="submit">Add</button>
     </form>
     <ul id="groceryList">
-        <li class="groeryItem">Milk</li>
-        <li class="groeryItem">Eggs</li>
-        <li class="groeryItem">Bread</li>
+        <li class="groceryItem">Milk</li>
+        <li class="groceryItem">Eggs</li>
+        <li class="groceryItem">Bread</li>
     </ul>
 </body>
 </html>
